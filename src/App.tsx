@@ -34,7 +34,10 @@ function App() {
               ):
               <CodeBlock language="yaml" value={exercise01CodeString} />
             </li>
-            <li>Make sure this triggered a workflow run in your repository by checking the <i>Actions</i> Tab</li>
+            <li>
+              Make sure this triggered a workflow run in your repository by checking the{' '}
+              <i>Actions</i> Tab
+            </li>
           </ul>
         </Concordion>
 
