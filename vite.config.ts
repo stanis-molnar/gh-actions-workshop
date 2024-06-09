@@ -6,9 +6,8 @@ import { configDefaults } from 'vitest/config';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/gh-actions-workshop-example/',
+  base: '/gh-actions-workshop/',
   test: {
-    // include: ['src/**/*.{test}.?(c|m)[jt]s?(x)']
     exclude: [...configDefaults.exclude, '**/tests/**', '.github/actions/**']
   }
 });

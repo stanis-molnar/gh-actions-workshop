@@ -34,14 +34,7 @@ function App() {
               ):
               <CodeBlock language="yaml" value={exercise01CodeString} />
             </li>
-            <li>
-              Explore the GitHub Actions Tab in `./actions`.
-              <ul>
-                <li>Trigger a workflow</li>
-                <li>Read the logs</li>
-              </ul>
-            </li>
-            <li>Disable the workflow in the end</li>
+            <li>Make sure this triggered a workflow run in your repository by checking the <i>Actions</i> Tab</li>
           </ul>
         </Concordion>
 

@@ -17,16 +17,22 @@ export const codeString_a = `
         run: npm ci
 
       - name: Install Playwright Browsers
+        # The resulting command should look like this for firefox:
+        # npx playwright install firefox
         run: npx playwright install <TODO: Install one of the specific browsers>
 
       - name: Run Playwright tests
+        # The resulting command should look like this for firefox:
+        # npx playwright test --project firefox
         run: npx playwright test --project <TODO: Test with one of the specific browsers>
         env:
-          PLAYWRIGHT_BASE_URL: <TODO: get the GitHub Pages url from the Deployment step of the previous job>
+          PLAYWRIGHT_BASE_DOMAIN: <TODO: get the GitHub Pages url from the Deployment step of the previous job>
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
+          # The resulting parameter should look like this for firefox:
+          # name: playwright-report-firefox
           name: playwright-report-<TODO: Upload the artefacts for the specific browser>
           path: playwright-report/
           retention-days: 1
@@ -114,7 +120,7 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test --project \${{ matrix.browser }}
         env:
-          PLAYWRIGHT_BASE_URL: \${{ needs.cd-pipeline.outputs.pages-url }}
+          PLAYWRIGHT_BASE_DOMAIN: \${{ needs.cd-pipeline.outputs.pages-url }}
 
       - uses: actions/upload-artifact@v4
         if: always()

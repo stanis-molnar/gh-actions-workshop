@@ -1,5 +1,5 @@
 {
-  "name": "gh-actions-workshop-example",
+  "name": "gh-actions-workshop",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "test": "vitest run",
+    "test:e2e": "export PLAYWRIGHT_BASE_DOMAIN=http://localhost:5173 && npx playwright test --project firefox",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
