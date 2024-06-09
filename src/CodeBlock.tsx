@@ -18,7 +18,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ language, value }) => {
   };
 
   return (
-    <div style={{ position: 'relative', display: 'inline-block' }}>
+    <div style={{ position: 'relative' }}>
       <SyntaxHighlighter language={language} style={coy} showLineNumbers>
         {value}
       </SyntaxHighlighter>
