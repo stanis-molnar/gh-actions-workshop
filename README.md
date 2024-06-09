@@ -3,7 +3,7 @@
 ## Preparation
 
 - Make sure you have a GitHub Account.
-- Fork this repository. Don't change the name of the repository!
+- Fork this repository: https://github.com/TNG-GitHub-Actions-Workshop/gh-actions-workshop. Don't change the name of the repository!
 - Make sure you have Node.js 20 installed.
 - Clone the repository locally.
   - Install all project dependencies with `npm ci`.
